@@ -1,0 +1,90 @@
+CONTEXTO DEL PROBLEMA 
+Una empresa llamada MediTurn se encuentra desarrollando una plataforma digital orientada a la gestión de atenciones en centros de salud.
+Como parte de la evolución de su sistema, la organización ha decidido comenzar la migración hacia una arquitectura basada en microservicios, con el fin de mejorar la independencia de sus componentes, facilitar el mantenimiento y permitir una futura escalabilidad de la solución.
+En esta primera etapa, el equipo de desarrollo debe construir un microservicio encargado de gestionar las solicitudes de atención registradas por los pacientes dentro del sistema.
+Este microservicio será responsable de registrar, administrar y consultar la información asociada a las solicitudes ingresadas.
+Dado que el sistema se encuentra aún en fase inicial de desarrollo, toda la información deberá almacenarse en memoria, utilizando estructuras de datos apropiadas.
+
+OBJETIVO PRINCIPAL 
+Desarrollar un microservicio backend utilizando Java Spring Boot, que permita gestionar las solicitudes de atención del sistema mediante una API REST.
+El microservicio deberá implementar operaciones que permitan:
+•	Registrar nuevas solicitudes
+•	Consultar solicitudes existentes
+•	Actualizar información de solicitudes
+•	Eliminar solicitudes del sistema
+•	Realizar consultas específicas sobre las solicitudes registradas
+El diseño e implementación deberán realizarse aplicando buenas prácticas de desarrollo de microservicios.	 
+
+REQUERIMIENTOS GENERALES 
+El microservicio deberá permitir administrar un conjunto de solicitudes de atención dentro del sistema.
+Cada solicitud deberá representar un requerimiento ingresado por un paciente para ser atendido en un centro de salud.
+Usted deberá definir el modelo de datos adecuado para representar una solicitud dentro del sistema, considerando atributos relevantes para su gestión.
+Entre los aspectos que pueden considerarse se encuentran, por ejemplo:
+•	Información del paciente
+•	Especialidad o tipo de atención requerida
+•	Estado de la solicitud
+•	Fecha de registro
+•	Nivel de prioridad
+Usted deberá analizar qué atributos son necesarios y seleccionar los tipos de datos apropiados.
+MODELADO DEL DOMINIO 
+El sistema deberá representar los pedidos mediante clases que describan su información y comportamiento.
+Debe diseñar el modelo de dominio considerando:
+•	Atributos relevantes para el contexto del problema
+•	Tipos de datos adecuados
+•	Identificadores únicos
+•	Estructuras que permitan gestionar múltiples tareas
+
+El sistema deberá utilizar colecciones en memoria para almacenar la información.
+
+OPERACIONES DEL MICROSERVICIO 
+El microservicio deberá permitir realizar operaciones básicas de administración sobre las solicitudes del sistema.
+
+Entre las funcionalidades mínimas que el servicio debe permitir se encuentran:
+•	Registrar nuevas solicitudes
+•	Consultar las solicitudes almacenadas
+•	Buscar solicitudes según algún criterio relevante
+•	Modificar información de solicitudes existentes
+•	Eliminar solicitudes del sistema
+
+Además, el sistema deberá permitir realizar al menos una operación de procesamiento o transformación sobre la colección de solicitudes, como, por ejemplo:
+•	Ordenar solicitudes
+•	Realizar búsquedas específicas
+•	Generar subconjuntos de información
+
+Debe definir e implementar una operación de manera coherente con el dominio del problema.
+
+DISEÑO DE LA API 
+El microservicio deberá exponer sus funcionalidades mediante endpoints REST, utilizando métodos HTTP adecuados para cada operación.
+El sistema deberá estar diseñado mediante:
+•	Rutas REST semánticamente correctas
+•	Uso adecuado de métodos HTTP
+•	Parámetros de ruta cuando corresponda
+•	Estructuras de respuesta en formato JSON
+Las respuestas del servicio deberán incluir códigos HTTP apropiados según el resultado de cada operación. 
+
+VALIDACIÓN DE DATOS 
+El sistema deberá implementar mecanismos de validación que permitan asegurar la integridad de los datos recibidos por el microservicio.
+El sistema deberá aplicar validaciones que impidan el registro de información inválida dentro del sistema.
+En caso de error en los datos de entrada, el microservicio deberá retornar mensajes claros que permitan identificar el problema.
+ 
+MANEJO DE ERRORES 
+El microservicio deberá ser capaz de manejar situaciones de error de manera controlada.
+Entre los posibles escenarios de error se encuentran:
+•	Solicitudes sobre recursos inexistentes
+•	Datos inválidos
+•	Operaciones que no puedan completarse
+El sistema deberá manejar estas situaciones sin provocar fallos en la ejecución del servicio.
+ESTRUCTURA TÉCNICA REQUERIDA 
+El proyecto deberá organizarse aplicando el patrón de arquitectura:
+Controller – Service – Repository/Model (CSR)
+
+Cada capa deberá mantener responsabilidades claramente definidas.
+
+PRUEBAS DEL SERVICIO
+Se deberá verificar el correcto funcionamiento del microservicio mediante pruebas de comunicación REST utilizando herramientas como Postman o similares.
+
+Las pruebas deberán permitir validar:
+•	La correcta ejecución de los endpoints
+•	El formato de las respuestas
+•	Los códigos HTTP retornados
+•	El manejo adecuado de errores
